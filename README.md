@@ -6,6 +6,8 @@
 
 A real-time oil pump vibration monitoring platform built as a [Databricks App](https://docs.databricks.com/en/dev-tools/databricks-apps/index.html) with a React frontend and FastAPI backend. This solution accelerator demonstrates live vibration analysis, FFT spectrum visualization, anomaly detection, and an AI operations assistant for upstream oil & gas fracking operations in the North Dakota Bakken Formation.
 
+<img src="images/opm_dashboard.png" alt="Oil Pump Vibration Monitor — Dashboard" width="100%">
+
 ## Overview
 
 Fracking pump failures from undetected vibration anomalies — bearing faults, cavitation, imbalance, and overspeed — cause costly unplanned downtime. This accelerator delivers:
@@ -19,6 +21,8 @@ Fracking pump failures from undetected vibration anomalies — bearing faults, c
 - **Data Flow Diagram** — Interactive architecture diagram showing the end-to-end data pipeline
 
 ## Architecture
+
+<img src="images/opm_dataflow.png" alt="Oil Pump Vibration Monitor — Data & AI Flow" width="100%">
 
 | Layer | Technology |
 |-------|-----------|
@@ -43,6 +47,8 @@ The FastAPI backend serves the pre-built React SPA from `frontend/dist/` and exp
 
 ## Anomaly Detection
 
+<img src="images/opm_critical_alert.png" alt="Oil Pump Vibration Monitor — Critical Alert on Bakken Unit 4" width="100%">
+
 The simulator injects anomalies with 3% probability per reading. The AI agent recognizes these fault signatures:
 
 | Fault Type | Vibration Signature | Operational Impact |
@@ -51,6 +57,8 @@ The simulator injects anomalies with 3% probability per reading. The AI agent re
 | **Cavitation** | Erratic amplitude, pressure drop >200 PSI | Warning — pump damage risk |
 | **Imbalance** | Elevated 1× fundamental, amplitude >1.5× baseline | Warning — accelerated wear |
 | **Overspeed** | RPM >400, high frequency, elevated temperature | Critical — thermal shutdown risk |
+
+<img src="images/opm_spectrum.png" alt="Oil Pump Vibration Monitor — FFT Spectrum Analysis" width="100%">
 
 ## API Endpoints
 
